@@ -16,9 +16,15 @@ import numpy as np
 from app.config import AUDIO_DIR, UPLOADS_DIR
 from app.services.storage_service import storage_service
 
-# Add chatterbox-streaming to path
-CHATTERBOX_PATH = Path(__file__).parent.parent.parent.parent.parent / "chatterbox-streaming" / "src"
-sys.path.insert(0, str(CHATTERBOX_PATH))
+# Prefer vendored chatterbox source for cloud deployment.
+# Fallback to legacy local folder if present.
+VENDORED_CHATTERBOX_PATH = Path(__file__).resolve().parents[2] / "vendor"
+LEGACY_CHATTERBOX_PATH = Path(__file__).resolve().parents[3] / "chatterbox-streaming" / "src"
+
+if VENDORED_CHATTERBOX_PATH.exists():
+    sys.path.insert(0, str(VENDORED_CHATTERBOX_PATH))
+elif LEGACY_CHATTERBOX_PATH.exists():
+    sys.path.insert(0, str(LEGACY_CHATTERBOX_PATH))
 
 # Import Chatterbox modules
 try:
@@ -141,7 +147,7 @@ class ChatterboxService:
             print(f"Loading Chatterbox TTS model on {self._device}...")
             try:
                 # Check for local fine-tuned model first
-                local_model_path = CHATTERBOX_PATH.parent / "checkpoints_lora" / "merged_model"
+                local_model_path = Path(__file__).resolve().parents[3] / "checkpoints_lora" / "merged_model"
                 if local_model_path.exists():
                     print(f"Loading fine-tuned model from {local_model_path}")
                     self._model = ChatterboxTTS.from_local(str(local_model_path), device=self._device)
