@@ -146,9 +146,14 @@ class ChatterboxService:
         if self._model is None:
             print(f"Loading Chatterbox TTS model on {self._device}...")
             try:
-                # Check for local fine-tuned model first
-                local_model_path = Path(__file__).resolve().parents[3] / "checkpoints_lora" / "merged_model"
-                if local_model_path.exists():
+                # Check for local fine-tuned model first (support both root and legacy folder layouts)
+                candidate_paths = [
+                    Path(__file__).resolve().parents[3] / "checkpoints_lora" / "merged_model",
+                    Path(__file__).resolve().parents[3] / "chatterbox-streaming" / "checkpoints_lora" / "merged_model",
+                ]
+                local_model_path = next((p for p in candidate_paths if p.exists()), None)
+
+                if local_model_path:
                     print(f"Loading fine-tuned model from {local_model_path}")
                     self._model = ChatterboxTTS.from_local(str(local_model_path), device=self._device)
                 else:
