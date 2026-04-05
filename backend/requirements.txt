@@ -1,0 +1,47 @@
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+sqlalchemy==2.0.25
+alembic==1.13.1
+pydub==0.25.1
+pyttsx3==2.90
+google-generativeai==0.3.2
+google-auth==2.27.0
+python-multipart==0.0.6
+pypdf2==3.0.1
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+aiofiles==23.2.1
+websockets==12.0
+python-dotenv==1.0.0
+pydantic-settings==2.1.0
+httpx==0.26.0
+bcrypt==4.0.1
+supabase==2.5.1
+psycopg2-binary==2.9.9
+
+# Chatterbox TTS dependencies
+torch==2.6.0
+torchaudio==2.6.0
+numpy~=1.26.0
+resampy==0.4.3
+librosa==0.10.0
+s3tokenizer
+transformers==4.46.3
+diffusers==0.29.0
+resemble-perth==1.0.1
+omegaconf==2.3.0
+conformer==0.3.2
+matplotlib
+sounddevice==0.5.2
+soundfile
+huggingface-hub
+
+# NLP and Document Processing dependencies
+nltk==3.9.1
+spacy==3.7.4
+python-docx==1.1.0
+python-pptx==0.6.23
+
+# Speech-to-Text (Whisper)
+faster-whisper==1.0.3
+openai-whisper==20231117

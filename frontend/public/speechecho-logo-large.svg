@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="800" height="240">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#4F46E5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#7C3AED" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Icon Background with shadow -->
+  <rect x="20" y="40" width="160" height="160" rx="32" fill="url(#logoGradient)" filter="url(#shadow)"/>
+  
+  <!-- Audio Waveform Icon -->
+  <g fill="none" stroke="white" stroke-width="8" stroke-linecap="round">
+    <line x1="55" y1="90" x2="55" y2="150"/>
+    <line x1="80" y1="70" x2="80" y2="170"/>
+    <line x1="105" y1="55" x2="105" y2="185"/>
+    <line x1="130" y1="70" x2="130" y2="170"/>
+    <line x1="155" y1="90" x2="155" y2="150"/>
+  </g>
+  
+  <!-- Text: SpeechEcho -->
+  <text x="220" y="145" font-family="Arial, Helvetica, sans-serif" font-size="84" font-weight="bold" fill="#111827">SpeechEcho</text>
+  
+  <!-- Tagline -->
+  <text x="224" y="190" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#6B7280">AI-Powered Voice Cloning System</text>
+</svg>

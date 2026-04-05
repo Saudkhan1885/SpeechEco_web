@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="620" viewBox="0 0 500 620" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients matching poster theme -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0891B2"/>
+      <stop offset="100%" style="stop-color:#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ECFEFF"/>
+      <stop offset="100%" style="stop-color:#CFFAFE"/>
+    </linearGradient>
+    <linearGradient id="techGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0FDFA"/>
+      <stop offset="100%" style="stop-color:#CCFBF1"/>
+    </linearGradient>
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#0891B2" flood-opacity="0.15"/>
+    </filter>
+    <filter id="smallShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0891B2"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="700" fill="#FFFFFF"/>
+  
+  <!-- Title -->
+  <text x="250" y="28" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0E7490" text-anchor="middle">System Workflow</text>
+
+  <!-- ============ INPUT LAYER (TOP) ============ -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="50" width="440" height="85" rx="12" fill="url(#boxGrad)" stroke="#0891B2" stroke-width="1.5"/>
+  </g>
+  <text x="250" y="72" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0E7490" text-anchor="middle">User Input</text>
+  
+  <!-- Input types in row -->
+  <!-- Voice Input -->
+  <g transform="translate(55, 82)">
+    <rect x="0" y="0" width="70" height="42" rx="6" fill="#FFFFFF" stroke="#14B8A6" stroke-width="1"/>
+    <circle cx="35" cy="16" r="10" fill="#06B6D4" opacity="0.2"/>
+    <path d="M35 10v10M32 20h6M35 10a2.5 2.5 0 012.5 2.5v3.5a2.5 2.5 0 01-5 0v-3.5A2.5 2.5 0 0135 10z" stroke="#0891B2" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+    <text x="35" y="37" font-family="Arial" font-size="8" fill="#0E7490" text-anchor="middle" font-weight="bold">Voice</text>
+  </g>
+  
+  <!-- Text Input -->
+  <g transform="translate(140, 82)">
+    <rect x="0" y="0" width="70" height="42" rx="6" fill="#FFFFFF" stroke="#14B8A6" stroke-width="1"/>
+    <circle cx="35" cy="16" r="10" fill="#06B6D4" opacity="0.2"/>
+    <rect x="28" y="10" width="14" height="11" rx="1" fill="none" stroke="#0891B2" stroke-width="1.3"/>
+    <line x1="30" y1="14" x2="40" y2="14" stroke="#0891B2" stroke-width="1"/>
+    <line x1="30" y1="17" x2="37" y2="17" stroke="#0891B2" stroke-width="1"/>
+    <text x="35" y="37" font-family="Arial" font-size="8" fill="#0E7490" text-anchor="middle" font-weight="bold">Text</text>
+  </g>
+  
+  <!-- Document Input -->
+  <g transform="translate(225, 82)">
+    <rect x="0" y="0" width="70" height="42" rx="6" fill="#FFFFFF" stroke="#14B8A6" stroke-width="1"/>
+    <g transform="translate(12, 6)">
+      <rect x="0" y="0" width="14" height="18" rx="1" fill="#FEE2E2" stroke="#DC2626" stroke-width="0.8"/>
+      <text x="7" y="12" font-family="Arial" font-size="5" fill="#DC2626" text-anchor="middle" font-weight="bold">PDF</text>
+    </g>
+    <g transform="translate(28, 6)">
+      <rect x="0" y="0" width="14" height="18" rx="1" fill="#DBEAFE" stroke="#2563EB" stroke-width="0.8"/>
+      <text x="7" y="12" font-family="Arial" font-size="4" fill="#2563EB" text-anchor="middle" font-weight="bold">DOC</text>
+    </g>
+    <g transform="translate(44, 6)">
+      <rect x="0" y="0" width="14" height="18" rx="1" fill="#FEF3C7" stroke="#D97706" stroke-width="0.8"/>
+      <text x="7" y="12" font-family="Arial" font-size="4" fill="#D97706" text-anchor="middle" font-weight="bold">PPT</text>
+    </g>
+    <text x="35" y="37" font-family="Arial" font-size="8" fill="#0E7490" text-anchor="middle" font-weight="bold">Documents</text>
+  </g>
+  
+  <!-- Voice Sample -->
+  <g transform="translate(310, 82)">
+    <rect x="0" y="0" width="130" height="42" rx="6" fill="#FFFFFF" stroke="#14B8A6" stroke-width="1"/>
+    <rect x="8" y="8" width="55" height="22" rx="3" fill="#F0FDFA"/>
+    <path d="M12 19 L17 13 L22 25 L27 10 L32 22 L37 14 L42 20 L47 12 L52 18 L57 15" stroke="#0891B2" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="95" y="16" font-family="Arial" font-size="7" fill="#0E7490" text-anchor="middle" font-weight="bold">Voice Sample</text>
+    <text x="95" y="26" font-family="Arial" font-size="6" fill="#6B7280" text-anchor="middle">(3-5 sec)</text>
+  </g>
+
+  <!-- Arrow down -->
+  <path d="M250 135 L250 160" stroke="#0891B2" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+
+  <!-- ============ PROCESSING LAYER (MIDDLE) ============ -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="170" width="360" height="280" rx="12" fill="url(#headerGrad)"/>
+  </g>
+  <text x="250" y="195" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Backend Processing</text>
+  
+  <!-- STT Module -->
+  <g filter="url(#smallShadow)">
+    <rect x="95" y="210" width="310" height="50" rx="8" fill="#FFFFFF"/>
+  </g>
+  <g transform="translate(110, 220)">
+    <circle cx="15" cy="15" r="13" fill="#412991" opacity="0.15"/>
+    <text x="15" y="20" font-family="Arial" font-size="14" text-anchor="middle">🎤</text>
+  </g>
+  <text x="250" y="232" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0E7490" text-anchor="middle">Speech-to-Text (STT)</text>
+  <text x="250" y="248" font-family="Arial" font-size="9" fill="#6B7280" text-anchor="middle">OpenAI Whisper • Automatic transcription</text>
+  
+  <!-- Arrow -->
+  <path d="M250 260 L250 275" stroke="#FFFFFF" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.7"/>
+
+  <!-- NLP Module -->
+  <g filter="url(#smallShadow)">
+    <rect x="95" y="275" width="310" height="50" rx="8" fill="#FFFFFF"/>
+  </g>
+  <g transform="translate(110, 285)">
+    <circle cx="15" cy="15" r="13" fill="#0E7490" opacity="0.15"/>
+    <text x="15" y="20" font-family="Arial" font-size="14" text-anchor="middle">📝</text>
+  </g>
+  <text x="250" y="297" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0E7490" text-anchor="middle">NLP Processing</text>
+  <text x="250" y="313" font-family="Arial" font-size="9" fill="#6B7280" text-anchor="middle">spaCy • Entity extraction • Text optimization</text>
+  
+  <!-- Arrow -->
+  <path d="M250 325 L250 340" stroke="#FFFFFF" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.7"/>
+
+  <!-- LLM Module -->
+  <g filter="url(#smallShadow)">
+    <rect x="95" y="340" width="310" height="50" rx="8" fill="#FFFFFF"/>
+  </g>
+  <g transform="translate(110, 350)">
+    <circle cx="15" cy="15" r="13" fill="#10B981" opacity="0.15"/>
+    <text x="15" y="20" font-family="Arial" font-size="14" text-anchor="middle">🤖</text>
+  </g>
+  <text x="250" y="362" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0E7490" text-anchor="middle">LLM Response Generation</text>
+  <text x="250" y="378" font-family="Arial" font-size="9" fill="#6B7280" text-anchor="middle">Groq API • Llama 3 • Context-aware responses</text>
+  
+  <!-- Arrow -->
+  <path d="M250 390 L250 405" stroke="#FFFFFF" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.7"/>
+
+  <!-- TTS Module -->
+  <g filter="url(#smallShadow)">
+    <rect x="95" y="405" width="310" height="50" rx="8" fill="#FFFFFF"/>
+  </g>
+  <g transform="translate(110, 415)">
+    <circle cx="15" cy="15" r="13" fill="#0891B2" opacity="0.15"/>
+    <text x="15" y="20" font-family="Arial" font-size="14" text-anchor="middle">🔊</text>
+  </g>
+  <text x="250" y="427" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0E7490" text-anchor="middle">Text-to-Speech (TTS)</text>
+  <text x="250" y="443" font-family="Arial" font-size="9" fill="#6B7280" text-anchor="middle">Chatterbox TTS • Zero-shot voice cloning</text>
+
+  <!-- Arrow down -->
+  <path d="M250 450 L250 480" stroke="#0891B2" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+
+  <!-- ============ OUTPUT LAYER (BOTTOM) ============ -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="490" width="440" height="90" rx="12" fill="url(#boxGrad)" stroke="#0891B2" stroke-width="1.5"/>
+  </g>
+  <text x="250" y="512" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0E7490" text-anchor="middle">Output</text>
+  
+  <!-- Output types in row -->
+  <!-- Cloned Voice -->
+  <g transform="translate(50, 522)">
+    <rect x="0" y="0" width="115" height="48" rx="6" fill="#FFFFFF" stroke="#14B8A6" stroke-width="1"/>
+    <circle cx="24" cy="24" r="14" fill="#14B8A6" opacity="0.2"/>
+    <path d="M24 17v10M21 27h6M24 17a3 3 0 013 3v3a3 3 0 01-6 0v-3a3 3 0 013-3z" stroke="#14B8A6" stroke-width="1.3" fill="none"/>
+    <text x="75" y="20" font-family="Arial" font-size="9" font-weight="bold" fill="#0E7490" text-anchor="middle">Cloned</text>
+    <text x="75" y="32" font-family="Arial" font-size="9" font-weight="bold" fill="#0E7490" text-anchor="middle">Voice</text>
+  </g>
+  
+  <!-- AI Chat -->
+  <g transform="translate(180, 522)">
+    <rect x="0" y="0" width="115" height="48" rx="6" fill="#FFFFFF" stroke="#14B8A6" stroke-width="1"/>
+    <circle cx="24" cy="24" r="14" fill="#14B8A6" opacity="0.2"/>
+    <rect x="16" y="17" width="16" height="14" rx="2" fill="none" stroke="#14B8A6" stroke-width="1.3"/>
+    <circle cx="21" cy="24" r="1.5" fill="#14B8A6"/>
+    <circle cx="27" cy="24" r="1.5" fill="#14B8A6"/>
+    <text x="75" y="20" font-family="Arial" font-size="9" font-weight="bold" fill="#0E7490" text-anchor="middle">AI Chat</text>
+    <text x="75" y="32" font-family="Arial" font-size="9" font-weight="bold" fill="#0E7490" text-anchor="middle">Response</text>
+  </g>
+  
+  <!-- Document Voiceover -->
+  <g transform="translate(310, 522)">
+    <rect x="0" y="0" width="115" height="48" rx="6" fill="#FFFFFF" stroke="#14B8A6" stroke-width="1"/>
+    <circle cx="24" cy="24" r="14" fill="#14B8A6" opacity="0.2"/>
+    <polygon points="18,17 18,31 26,31 34,35 34,13 26,17" fill="#14B8A6" opacity="0.7"/>
+    <path d="M37 20 Q41 24 37 28" stroke="#14B8A6" stroke-width="1.3" fill="none"/>
+    <text x="78" y="20" font-family="Arial" font-size="9" font-weight="bold" fill="#0E7490" text-anchor="middle">Document</text>
+    <text x="78" y="32" font-family="Arial" font-size="9" font-weight="bold" fill="#0E7490" text-anchor="middle">Voiceover</text>
+  </g>
+
+  <!-- Streaming badge -->
+  <rect x="175" y="575" width="150" height="22" rx="11" fill="#0891B2"/>
+  <text x="250" y="590" font-family="Arial" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">🔊 Real-time Streaming</text>
+
+  <!-- Footer -->
+  <text x="250" y="610" font-family="Arial" font-size="8" fill="#9CA3AF" text-anchor="middle">SpeechEcho v1.0 • Zero-shot voice cloning • South Asian accent optimized</text>
+
+</svg>

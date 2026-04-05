@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#4F46E5"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon Background -->
+  <rect x="10" y="20" width="80" height="80" rx="16" fill="url(#logoGradient)"/>
+  
+  <!-- Audio Waveform Icon -->
+  <g fill="none" stroke="white" stroke-width="4" stroke-linecap="round">
+    <line x1="30" y1="45" x2="30" y2="75"/>
+    <line x1="42" y1="35" x2="42" y2="85"/>
+    <line x1="54" y1="28" x2="54" y2="92"/>
+    <line x1="66" y1="35" x2="66" y2="85"/>
+    <line x1="78" y1="45" x2="78" y2="75"/>
+  </g>
+  
+  <!-- Text: SpeechEcho -->
+  <text x="110" y="70" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="bold" fill="#111827">SpeechEcho</text>
+  
+  <!-- Tagline -->
+  <text x="112" y="95" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#6B7280">Voice Cloning System</text>
+</svg>
