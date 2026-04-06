@@ -4,6 +4,7 @@ Configuration settings for SpeechEcho Backend
 import os
 from typing import List
 from dotenv import load_dotenv
+from pydantic import Field
 from pydantic_settings import BaseSettings
 
 load_dotenv()
@@ -20,9 +21,9 @@ class Settings(BaseSettings):
 
     # App / CORS
     APP_ENV: str = os.getenv("APP_ENV", "development")
-    CORS_ORIGINS_RAW: str = os.getenv(
-        "CORS_ORIGINS",
-        "http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173"
+    CORS_ORIGINS_RAW: str = Field(
+        default="http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173",
+        validation_alias="CORS_ORIGINS",
     )
     
     # Groq API
